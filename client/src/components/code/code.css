@@ -1,0 +1,161 @@
+.edit-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display: grid;
+  overflow: auto;
+}
+.code-header {
+  width: 100%;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+.head-left {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.head-right {
+  width: 100%;
+  display: flex;
+  margin-right: 1rem;
+  justify-content: flex-end;
+}
+.code-body {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+}
+.edit-panel,
+.marked-container,
+.mycode-container {
+  border: 2px solid #e0e0e0;
+  border-bottom: none;
+  border-left: none;
+}
+.marked-container,
+.mycode-container {
+  height: 93vh;
+}
+.CodeMirror {
+  height: calc(86vh / 3) !important;
+  max-width: 450px !important;
+  border: 4px solid #e0e0e0;
+}
+.code-title {
+  padding: 12px 20px;
+  outline: 0;
+  margin: 0;
+  border: 0;
+  color: #bdbdbd;
+  font-family: Open sans;
+  font-size: 17px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  border-right: 4px solid #e0e0e0;
+}
+.pane {
+  border: 4px solid #e0e0e0;
+}
+.code-title2 {
+  display: none;
+}
+.code-name {
+  position: absolute;
+  z-index: 9999;
+  font-weight: 700;
+  text-align: left;
+  float: left;
+  font-size: 20px;
+  color: black;
+  transform: translate(400px, 10px);
+  user-select: none;
+  color: rgb(182, 182, 30);
+}
+@media screen and (max-width: 1050px) {
+  .code-body {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+  }
+  .CodeMirror {
+    max-width: 300px !important;
+    font-size: medium !important;
+  }
+  .code-name {
+    transform: translate(250px, 10px);
+  }
+}
+@media screen and (max-width: 750px) {
+  .code-body {
+    grid-template-columns: 1fr;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 40px;
+  }
+  .CodeMirror {
+    width: 100% !important;
+    font-size: xx-small !important;
+    height: 30vh !important;
+  }
+  .editors-container {
+    width: 100%;
+    height: 20%;
+  }
+  .edit-panel {
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    justify-content: 100%;
+    position: absolute;
+    top: 25px;
+  }
+  .code-title {
+    display: none;
+  }
+  .code-name {
+    transform: translate(100px, 10px);
+    font-size: 10px !important;
+  }
+  .pane {
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    top: 30vh;
+  }
+  .code-title2 {
+    height: 20px;
+    padding: 6px;
+    outline: 0;
+    margin: 0;
+    border: 0;
+    color: #bdbdbd;
+    font-family: Open sans;
+    font-size: 17px;
+    width: 100%;
+    box-sizing: border-box;
+    border-right: 4px solid #e0e0e0;
+    display: block;
+  }
+}

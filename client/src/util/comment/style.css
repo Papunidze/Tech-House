@@ -1,0 +1,19 @@
+.comment {
+  display: grid;
+  width: 100%;
+  place-items: center;
+}
+.text {
+  justify-content: flex-start;
+  position: absolute;
+  width: 100%;
+  text-align: start;
+  margin-left: 3.5rem;
+  margin-top: 0.5rem;
+  font-size: medium;
+}
+@media screen and (max-width: 750px) {
+  #comment-form {
+    width: 90%;
+  }
+}

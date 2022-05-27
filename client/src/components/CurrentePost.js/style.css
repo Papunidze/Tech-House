@@ -1,0 +1,44 @@
+.current-post {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  align-items: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+.section {
+  width: 100%;
+  display: grid;
+  grid-row-gap: 1rem;
+  text-align: justify;
+  margin-top: 2rem;
+}
+.img-current img {
+  width: 60%;
+}
+.comment-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+@media screen and (max-width: 750px) {
+  .current-post {
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .comment-section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+  }
+  .img-current img {
+    margin-right: 20rem;
+  }
+}

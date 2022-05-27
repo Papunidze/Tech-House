@@ -1,0 +1,364 @@
+.g-add-question-btn {
+  position: absolute;
+  right: 6%;
+}
+.g-add-question-btn button {
+  width: 250px;
+  height: 35px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #1867cf;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.g-all-question {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.g-all-question .no-question {
+  user-select: text;
+  width: 90%;
+  max-width: 1100px;
+  margin-top: 40px;
+}
+.g-all-question .question {
+  border-top: 1px solid rgb(221, 215, 215);
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.g-all-question .question:first-child {
+  margin-top: 40px;
+}
+.g-all-question .question header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.g-all-question .question header .header {
+  display: flex;
+  width: 98%;
+  max-width: 800px;
+}
+
+.g-all-question .question header .image-place,
+.text-place {
+  padding: 7px;
+}
+.g-all-question .question header .text-place {
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.g-all-question .question header .text-place .date {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.g-all-question .question header .text-place .date span {
+  margin: 0px 4px;
+}
+.g-all-question .question header .text-place .date .three-points {
+  margin-left: auto;
+}
+.g-all-question .question header .text-place .three-points .del-edit {
+  position: absolute;
+  transform: translateX(-50px);
+  z-index: 8;
+}
+.g-all-question .question header .text-place .three-points .del-edit div {
+  cursor: pointer;
+  margin: 5px;
+  width: 100px;
+}
+.g-all-question .question header .text-place .three-points .del-edit div:hover {
+  border-left: 2px solid #1867cf;
+}
+.g-all-question .question header .question-place {
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Secular One", sans-serif;
+  word-spacing: 0px;
+}
+.g-all-question .question .image-place img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 2px;
+}
+.g-all-question .question footer.reactions {
+  margin-top: 5px;
+  border-top: 1px solid rgb(248, 243, 243);
+  border-bottom: 3px solid rgb(241, 235, 235);
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 27px;
+  padding-bottom: 40px;
+}
+.g-all-question .question footer.reactions div.reactions {
+  width: 50%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+.g-all-question .question .reactions .icon {
+  padding: 6px;
+  cursor: pointer;
+}
+.g-all-question .question .reactions span {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgb(163, 159, 159);
+  cursor: pointer;
+}
+.g-all-question .question .reactions span span {
+  font-size: 20px;
+  font-weight: bolder;
+  border-bottom: 0px;
+}
+/* Add Questions styling place */
+.g-all-question .hidden-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 4;
+}
+.g-all-question .center-div {
+  z-index: 5;
+  top: auto;
+  left: auto;
+  width: 70%;
+  max-width: 800px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.g-all-question .add-question-place {
+  z-index: 3;
+  width: 90%;
+  max-width: 600px;
+  min-height: 400px;
+  background-color: white;
+  animation-duration: 2.5s;
+  animation-name: addquestion;
+}
+
+.g-all-question .add-question-place header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.g-all-question .add-question-place main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.g-all-question .add-question-place .image-input {
+  margin-top: 15px;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.g-all-question .add-question-place main .input-text {
+  width: 90%;
+  max-width: 500px;
+  height: 200px;
+  background-color: rgb(210, 213, 216);
+  color: black;
+  outline: none;
+  font-size: 20px;
+}
+.g-all-question .add-question-place footer {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.g-all-question .add-question-place footer button {
+  width: 100px;
+  height: 35px;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(223, 215, 215);
+  background-color: rgb(26, 26, 230);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Image on the screen */
+.g-all-question .center-div img {
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+}
+
+/* Share Buttons */
+
+.g-all-question .share-buttons {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  margin-top: 140px;
+  margin-left: -140px;
+}
+.g-all-question .box {
+  width: 150px;
+  height: 55px;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.g-all-question .box a {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.g-all-question .box a:hover {
+  color: #3683ff;
+  text-shadow: 0 0 20px #3683ff9f;
+}
+.g-all-question .top {
+  position: absolute;
+  background-color: #ecf4ff;
+  top: -1%;
+  width: 102%;
+  height: 50px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+  text-shadow: 0 0 20px #3683ff9f;
+}
+.g-all-question .top p {
+  transition: all 0.4s;
+}
+.g-all-question .bottom {
+  position: absolute;
+  bottom: -1%;
+  width: 102%;
+  height: 2px;
+  border-radius: 0 0 10px 10px;
+  transition: all 0.4s;
+}
+.g-all-question .bottom::before {
+  contain: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: all 0.2s;
+}
+.g-all-question .box:hover .bottom::before {
+  transform: translate(-50%, 380%);
+  background-color: #3683ff;
+  box-shadow: 0 0 20px #3683ff9f;
+}
+.g-all-question .box:hover .top {
+  height: 20px;
+  transform: translateY(-80%);
+}
+.g-all-question .box:hover .top p {
+  color: #3683ff;
+  text-shadow: 0 0 20px #3683ff;
+}
+.g-all-question .box:hover .bottom {
+  transform: translateY(38%);
+}
+/* ==================== C O M M E N T S ======================= */
+.g-all-question .all-comments {
+  z-index: 3;
+  width: 90%;
+  max-width: 800px;
+  min-height: 200px;
+  max-height: 600px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  animation-name: comments;
+  animation-duration: 2s;
+}
+.g-all-question .g-comment-container {
+  width: 95%;
+  min-height: 100px;
+  border-bottom: 2px solid rgb(159, 154, 154);
+}
+.g-all-question .g-comment-container header {
+  font-size: 20px;
+}
+.g-all-question .g-comment-container main.g-comment {
+  min-height: 70%;
+  margin-top: 20px;
+  font-size: 18px;
+  user-select: text;
+  font-family: "Roboto Condensed", sans-serif;
+  word-wrap: break-word;
+}
+.g-all-question .comment-inputs {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  padding: 15px 0px;
+}
+.g-all-question .comment-inputs input {
+  width: 100%;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  height: 40px;
+  font-size: 18px;
+  background-color: #dedede;
+}
+.g-all-question .comment-inputs button {
+  width: 50px;
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin-top: 5px;
+  cursor: pointer;
+}
+/* =========================R E S P O N S I V E ======================= */
+@media screen and (max-width: 600px) {
+  .g-all-question .question .reactions span span.comments {
+    display: none;
+  }
+}

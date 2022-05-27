@@ -1,0 +1,35 @@
+.learning-contianer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  gap: 2rem;
+  padding: 2rem;
+  flex-direction: column;
+}
+.learning-url,
+.learning-youtuber {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  text-align: justify;
+  overflow: hidden;
+  place-items: center;
+  grid-column-gap: 2rem;
+}
+.learning-youtuber {
+  margin-bottom: 1.5rem;
+}
+.link {
+  display: grid;
+  grid-row-gap: 0.5rem;
+  width: 100%;
+}
+.link a {
+  text-decoration: underline;
+  color: blue;
+}
+.learning-contianer img {
+  width: 100%;
+}

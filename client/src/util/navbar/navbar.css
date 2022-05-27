@@ -1,0 +1,119 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
+}
+.logo {
+  width: 10%;
+  display: flex;
+  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.logo img {
+  width: 5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.components {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  gap: 2rem;
+}
+.components button,
+.user-settings button,
+.mobile-menu button {
+  background: none;
+  overflow: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.components button label,
+.user-settings button label,
+.mobile-menu button label {
+  cursor: pointer;
+  color: purple;
+  font-weight: 600;
+}
+
+.components .navbar-btn:hover {
+  transform: scale(1.4);
+}
+.user {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+.burgermenu {
+  display: none;
+}
+.user img {
+  border-radius: 50%;
+  width: 2.5rem;
+}
+.user-settings {
+  border-radius: 3px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  transition: box-shadow 0.6s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+  color: rgba(42, 52, 84, 1);
+  text-decoration: none;
+  position: absolute;
+  top: 120px;
+  padding: 2rem;
+  animation: Zoom 0.8s ease-in-out forwards;
+  z-index: 100000000;
+}
+.user-settings button:hover {
+  transform: scale(1.2);
+}
+.mobile-menu {
+  display: none;
+}
+@keyframes Zoom {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 750px) {
+  .components {
+    display: none;
+  }
+  .mobile-menu button {
+    color: white;
+  }
+  .burgermenu {
+    display: block;
+    z-index: 99;
+  }
+  .logo {
+    width: 100%;
+  }
+  .user {
+    width: 100%;
+  }
+}
